@@ -1,0 +1,18 @@
+Install steps:
+
+1. Create project
+create a new folder
+
+2. Create Playwrgh project
+- Install PW Test for VS plugin
+- Ctrl Shift P: select Install pw
+- 
+3. Install plugin
+- Install VSCode Cucumber (Gherkin) Full Language Support + Form
+- Delete example test folder
+
+4. Install dependencies
+- npm i @cucumber/cucumber -D
+- npm i ts-node - D
+
+=======================
