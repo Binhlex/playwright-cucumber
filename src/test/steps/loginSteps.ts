@@ -13,7 +13,9 @@ Given("User click on the login link", async function () {
 });
 
 Given("User enter the username as {string}", async function (username) {
-  await pageFixtures.page.locator("input[data-placeholder='Username']").type(username);
+  await pageFixtures.page
+    .locator("input[data-placeholder='Username']")
+    .type(username);
 });
 
 Given("User enter the password as {string}", async function (password) {
@@ -26,14 +28,16 @@ When("User click on the login button", async function () {
   await pageFixtures.page.waitForTimeout(2000);
 });
 
-Then("Login should be success", async function () {
+Then("The Username should be displayed in homepage", async function () {
   const text = await pageFixtures.page
-    .locator("//button[contains(@class,'mat-focus-indicator mat-menu-trigger')]//span[1]")
+    .locator(
+      "//button[contains(@class,'mat-focus-indicator mat-menu-trigger')]//span[1]"
+    )
     .textContent();
   console.log("Username: " + text);
 });
 
-When("Login should fail", async function () {
+When("Error message should be displayed", async function () {
   const failureMessage = pageFixtures.page.locator("mat-error[role='alert']");
   await expect(failureMessage).toBeVisible();
 });

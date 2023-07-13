@@ -13,9 +13,9 @@ Feature: Add products to cart
         Then the cart badge should get updated
 
         Examples:
-            | username | password  | book            |
-            | ortoni   | pass1234$ | Roomies         |
-            | ortonikc | pass1234  | The Simple Wild |
+            | username | password | book            |
+            | binhle   | Pass@123 | Roomies         |
+            | ortonikc | pass1234 | The Simple Wild |
 
 # @fail
 # Scenario: UnAuthenticated User - Add to cart

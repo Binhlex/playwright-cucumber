@@ -6,8 +6,9 @@
   "scripts": {
     "pretest": "npx ts-node src/helper/init.ts",
     "test": "cucumber-js test || true",
-    "posttest": "npx ts-node src/helper/report.ts",
-    "test:failed": "cucumber-js -p rerun @rerun.txt"
+    "posttest": "npx ts-node src/helper/update-AIO-report.ts",
+    "test:failed": "cucumber-js -p rerun @rerun.txt",
+    "test:tags": "npx cucumber-js --tags @LP-TC-3"
   },
   "keywords": [],
   "author": "",
@@ -18,5 +19,9 @@
     "fs-extra": "^11.1.1",
     "multiple-cucumber-html-reporter": "^3.4.0",
     "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "dotenv": "^16.3.1"
   }
 }
